@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">custom dialogues</string>
+    <string name="delete">delete</string>
+    <string name="update">update</string>
+    <string name="enter_name">enter name</string>
+    <string name="add">add</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_data_msg">add data msg</string>
+    <string name="add_data">add data</string>
+</resources>
