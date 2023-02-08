@@ -10,7 +10,7 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/layout_customdialogue"
+
         android:id="@+id/lvListView"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

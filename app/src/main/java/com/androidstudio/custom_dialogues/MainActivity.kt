@@ -73,14 +73,21 @@ class MainActivity : AppCompatActivity() {
                 WindowManager.LayoutParams.MATCH_PARENT,
                 WindowManager.LayoutParams.WRAP_CONTENT)
             dialogBinding.etName.setText(arrayList[position])
+            dialogBinding.etrollno.setText(arrayList[position])
+            dialogBinding.etphoneNo.setText(arrayList[position])
 
             dialogBinding.btnUpdate.setOnClickListener {
                 if(dialogBinding.etName.text.toString().isNullOrEmpty()){
                     dialogBinding.etName.error = resources.getString(R.string.enter_name)
-                }
-                else
+                }else if(dialogBinding.etrollno.text.toString().isNullOrEmpty()) {
+                    dialogBinding.etrollno.error = resources.getString(R.string.enter_roll_no)
+                }else if(dialogBinding.etphoneNo.text.toString().isNullOrEmpty()) {
+                    dialogBinding.etphoneNo.error = resources.getString(R.string.enter_phone_no)
+                } else
 //                    binding.lvListView.setText(dialogBinding.etName.text.toString())
                     arrayList[position]= dialogBinding.etName.text.toString()
+                arrayList[position]= dialogBinding.etrollno.text.toString()
+                arrayList[position]= dialogBinding.etphoneNo.text.toString()
                 arrayAdapter.notifyDataSetChanged()
                 dialog.dismiss()
             }
